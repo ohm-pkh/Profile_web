@@ -1,8 +1,9 @@
-html,body{
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,20 +19,62 @@ html,body{
 }
 
 @font-face {
-    font-family: 'Livvic';
-    src: url('./fonts/Livvic/');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Livvic';
+  src: url('./fonts/Livvic/Livvic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-h1{
-    font-family: 'Livvic';
-    font-size: 2.5rem;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  z-index: 100;
+  font-family: 'Livvic', sans-serif;
 }
 
-.comp-container{
-    padding: 2%;
-    height: 100vh;
-    margin: 0px;
-    color: white;
+nav ul {
+  display: flex;
+}
+
+nav li {
+  width: fit-content;
+  list-style-type: none;  
+  font-size: clamp(1rem, 1.5rem, 2rem);
+  cursor:pointer;
+  width: min(10%,300px);
+  text-align: center;
+  font-weight: bold;
+}
+
+nav li:hover{
+  color: black;
+  background-color: white;
+}
+
+nav a{
+  text-decoration: none;
+  display: block;
+  padding: min(0.5rem, 8%);
+}
+
+h1 {
+  font-family: 'Livvic', sans-serif; 
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.comp-container {
+  padding: 1%;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  color: white;
+}
+
+#Home{
+  padding-top: calc(clamp(1rem, 1.5rem, 2rem) + (min(0.5rem, 8%) * 2) + 1%);
 }
