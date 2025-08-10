@@ -1,6 +1,6 @@
 :root {
   --st-primary-color: #050013;
-  --nd-primary-color: #0B0029;
+  --secondary-color: #0B0029;
   --fonts-color: #CBCBCB;
 }
 
@@ -38,10 +38,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
   font-family: 'Livvic', sans-serif;
-  border-bottom: solid 1px var(--fonts-color);
 }
 
 nav ul {
@@ -100,6 +99,7 @@ h1 {
 }
 .Detail-container .Detail{
   width: max(40%,400px);
+
 }
   
 #Home p{
@@ -111,15 +111,38 @@ h1 {
 }
 
 .cir-container{
-  margin-left: -5%; 
-  width: 110%;
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  justify-self: center;
+  width: calc(100% + 40px);
+  height: calc(100% + 200px);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.cir:first-child{
+  margin: 0 0 0 0;
 }
 
 .cir{
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  border: solid 1px;
+  border: solid 3px;
+  margin: 0 0 0 -90px;
+  animation: bubbleUp linear infinite;
+}
+
+
+@keyframes bubbleUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000%);
+      opacity: 0;
+    }
 }
