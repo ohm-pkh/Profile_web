@@ -132,6 +132,66 @@ h1 {
   animation: bubbleUp linear infinite;
 }
 
+.me-nav{
+  z-index: 1;
+  align-self: start;
+  width: 70%;
+}
+
+
+.me-nav ul{
+  display: flex;
+  height: 100px;
+  align-items: end;
+  gap: 10px;
+}
+
+.me-nav li{
+  width: fit-content;  
+  font-size: 1.5rem;
+  font-family: 'Livvic';
+  font-weight: bold;
+  list-style-type: none;
+  background-color: var(--fonts-color);  
+  color: var(--secondary-color);
+  height: 40px;
+  padding: 0 20px 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s linear;
+}
+
+.me-nav li:hover{
+  background-color: var(--st-primary-color);
+  border: 3px solid var(--fonts-color);
+  padding: 0 17px 0 17px;
+  color: var(--fonts-color);
+}
+
+li.me-active{
+  height: 65px;
+  font-size: 2rem;
+  cursor: default;
+  pointer-events: none;
+}
+
+.my-active{
+  z-index: 2;
+}
+
+.my-folder{
+  padding: 25px;
+  color: var(--secondary-color);
+  position: absolute;
+  width: 80%;
+  height: 70%;  
+  background-color: var(--fonts-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
 
 @keyframes bubbleUp {
     0% {
