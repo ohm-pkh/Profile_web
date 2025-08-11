@@ -136,12 +136,13 @@ h1 {
   z-index: 1;
   align-self: start;
   width: 70%;
+  height: 14%;
 }
 
 
 .me-nav ul{
   display: flex;
-  height: 100px;
+  height: 100%;
   align-items: end;
   gap: 10px;
 }
