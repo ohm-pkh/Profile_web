@@ -181,7 +181,7 @@ li.me-active{
 }
 
 .my-folder{
-  padding: 25px;
+  padding: 50px;
   color: var(--secondary-color);
   position: absolute;
   width: 80%;
@@ -189,8 +189,52 @@ li.me-active{
   background-color: var(--fonts-color);
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: 'Livvic';
 }
 
+.my-folder#Profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#Profile img{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.spin-border{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 5px dashed var(--st-primary-color);
+  box-sizing: border-box;
+  animation: spin 10s linear infinite;
+}
+
+#Profile .img-container{
+  position: relative;
+  height: 250px;
+  width: 250px;
+}
+
+#Profile .text {
+  width: 60%;
+}
+
+#Profile h2{
+  margin-bottom: 10px;
+  justify-self: center;
+  text-decoration: underline;
+}
 
 
 
@@ -206,4 +250,9 @@ li.me-active{
       transform: translateY(-1000%);
       opacity: 0;
     }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
